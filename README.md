@@ -7,4 +7,4 @@ run.bash
 ```
 
 ## Output Plot
-![Output](https://github.com/jaem/scot-gov-stats/c19_stats.png)
+![Output](https://github.com/jaem/scot-gov-stats/blob/master/c19_stats.png)
