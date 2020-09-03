@@ -1,4 +1,4 @@
-echo "Getting data from Scot.giv"
+echo "Getting data from Scot.gov"
 curl -o scot.covid.deaths.csv -L https://statistics.gov.scot/downloads/cube-table?uri=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Fdeaths-involving-coronavirus-covid-19
 curl -o scot.covid.testing.csv -L https://statistics.gov.scot/downloads/cube-table?uri=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Fcoronavirus-covid-19-management-information
 

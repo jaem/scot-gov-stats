@@ -7,4 +7,9 @@ run.bash
 ```
 
 ## Output Plot
-![Output](https://github.com/jaem/scot-gov-stats/c19_stats.png)
+![Output](https://github.com/jaem/scot-gov-stats/blob/master/c19_stats.png)
+
+## Update
+You can now get the S12 codes from, all the labels have been added so you can work out what you need.
+Its still a big table
+https://statistics.gov.scot/data/data-zone-lookup
