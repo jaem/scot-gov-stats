@@ -28,6 +28,7 @@ my $stats_causeOfDeath = get_data_file_as_hash_ref($debug, 'aoh', 'id'          
 
 my $hash_ref = $stats_causeOfDeath->all; # get a hash of all these values
 my $totalDeaths = 0;
+my $totalPopulation = 0;
 my %results;
 my %records;
 
@@ -67,7 +68,9 @@ foreach my $entry (keys ($hash_ref)) {
       $results{$key}{covid_deaths} = $hash_ref->[$entry]{Value};
       $results{$key}{covid_deaths_per_100k} = sprintf ("%.2f", ($hash_ref->[$entry]{Value}/( $p_ref->{Count} / 100000 )));
     
-   	  $totalDeaths += $hash_ref->[$entry]{Value};
+   	$totalDeaths += $hash_ref->[$entry]{Value};
+      $totalPopulation += $p_ref->{Count};
+
    }
 }
 
@@ -95,7 +98,9 @@ open(FH, '>', $outfile) or die $!;
 print FH $outStr;
 close(FH);
 
-print ("Deaths : $totalDeaths\n");
+print ("Deaths          : $totalDeaths\n");
+print ("TotalPopulation : $totalPopulation\n");
+print ("DeathsPer1Mil   : " . ($totalDeaths/($totalPopulation/1000000)) . "\n");
 
 ## ----------------------------------------------------------------------------
 ## break this call into a sub, so we can add some common debug printing.
